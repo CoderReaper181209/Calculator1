@@ -12,7 +12,7 @@ public class Main
 		// if operator = !
 	      
 	      if(operator.equals("!")) {
-		    
+		   
 		    System.out.print("Enter a number: ");
 		    
 		    int j = s1.nextInt();
