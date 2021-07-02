@@ -153,7 +153,7 @@ public class Main
 			
 		   int l = num1 % num2;
 		 System.out.println("Remainder is:" + "\t" +l);
-			
+		 
 		}
 	     }
 	}
