@@ -1,7 +1,5 @@
 # Calculator1
-Calculator - Mathematical and scientific calculator
-
-This is a Mathematical as well as scientific calculator.
+Calculator - Mathematical and scientific calculator.
 
 Mathemical calculator include operators = ( + , - , * , / , % , ! , x² , √ , Tan, Cos, Sin)
 
