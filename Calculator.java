@@ -15,8 +15,7 @@ public class Main
 		      fact *= i;
 			    
 		   }
-		    return fact;
-	 
+		    return fact; 
     }
     
     // Square function
@@ -62,25 +61,25 @@ public class Main
     
     // Addition function
     
-    static int addition(int num1, int num2) {
+    static double addition(double num1, double num2) {
         
-        int e = num1 + num2;
+        double e = num1 + num2;
         return e;
     }
     
     // Subtraction function
     
-    static int subtraction(int num1, int num2) {
+    static double subtraction(double num1, double num2) {
         
-        int a = num1 - num2;
+        double a = num1 - num2;
         return a;
     }
     
     // multiplication function
     
-    static int multiplication(int num1, int num2) {
+    static double multiplication(double num1, double num2) {
         
-       int q = num1 * num2;
+       double q = num1 * num2;
         return q;
     }
     
@@ -88,15 +87,15 @@ public class Main
     
     static double division(double num1, double num2) {
         
-        double k = (double) num1 / num2;
+        double k = num1 / num2;
         return k;
     }
     
     // Remainder function
     
-    static int remainder(int num1, int num2) {
+    static double remainder(double num1, double num2) {
         
-         int l = num1 % num2;
+         double l = num1 % num2;
         return l;
     }
     
@@ -124,6 +123,40 @@ public class Main
         return sin;
     }
     
+    // PI function
+    
+    static double PI(double j) {
+        
+        double PI = 3.141592653589793238;
+        double val = PI*j;
+        return val;
+    }
+    
+    
+    // log function
+    
+    static double log(double j) {
+        
+        double log = Math.log(j);
+        return log;
+    }
+    
+    // e function
+    
+    static double e(double j) {
+        
+        double e = 2.718281828459045;
+        double eVal = e*j;
+        return eVal;
+    }
+    
+    // EXP function
+    
+    static double EXP(double j) {
+        
+        double EXPval = Math.exp(j);
+        return EXPval;
+    }
     
     
 	public static void main(String[] args) {
@@ -132,7 +165,7 @@ public class Main
 	    
 	    String operator = "";
 	    
-	    while (!operator.equals("!") && !operator.equals("squareRoot") && !operator.equals("Square") && !operator.equals("tan") && !operator.equals("cos") && !operator.equals("sin") && !operator.equals("a") && !operator.equals("Speed") && !operator.equals("Power") && !operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("%")) {
+	    while (!operator.equals("!") && !operator.equals("squareRoot") && !operator.equals("Square") && !operator.equals("tan") && !operator.equals("cos") && !operator.equals("sin") && !operator.equals("a") && !operator.equals("Speed") && !operator.equals("Power") && !operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("%") && !operator.equals("PI") && !operator.equals("log") && !operator.equals("e") && !operator.equals("EXP")) {
 		 
 		System.out.print("Enter a operator: ");
 		 operator = s1.nextLine();
@@ -155,7 +188,7 @@ public class Main
           else if (operator.equals("squareRoot")) {
 
 		   System.out.print("Enter a number: ");
-		   int j = s1.nextInt();
+		   double j = s1.nextDouble();
 		    
 		   System.out.println(squareRoot(j));
 		
@@ -178,7 +211,7 @@ public class Main
 	   else if(operator.equals("tan")) {
 			
 		  System.out.print("Enter a number: ");
-		  double j = s1.nextInt();
+		  double j = s1.nextDouble();
 		
 		 System.out.println("Tan of this number is:" + "\t" + tan(j));
 		 
@@ -189,7 +222,7 @@ public class Main
 	   else if(operator.equals("cos")) {
 			
 		  System.out.print("Enter a number: ");
-		  double j = s1.nextInt();
+		  double j = s1.nextDouble();
 		
 		 System.out.println("Cos of this number is:" + "\t" + cos(j));
 		 
@@ -200,25 +233,68 @@ public class Main
 	   else if(operator.equals("sin")) {
 			
 		  System.out.print("Enter a number: ");
-		  double j = s1.nextInt();
+		  double j = s1.nextDouble();
 		
 		 System.out.println("Sin of this number is:" + "\t" + sin(j));
 		 
 		}
 		
+		//  if operator = PI
+		    
+          else if (operator.equals("PI")) {
+
+		   System.out.print("Enter a number: ");
+		   double j = s1.nextDouble();
+		    
+		   System.out.println(PI(j));
+		
+		}
+		
+		//  if operator = log
+		    
+          else if (operator.equals("log")) {
+
+		   System.out.print("Enter a number: ");
+		   double j = s1.nextDouble();
+		    
+		   System.out.println("Natural log: " + "\t" + log(j));
+		
+		}
+		
+		//  if operator = e
+		    
+          else if (operator.equals("e")) {
+
+		   System.out.print("Enter a number: ");
+		   double j = s1.nextDouble();
+		    
+		   System.out.println(e(j));
+		
+		}
+		
+		//  if operator = EXP
+		    
+          else if (operator.equals("EXP")) {
+
+		   System.out.print("Enter a number: ");
+		   double j = s1.nextDouble();
+		    
+		   System.out.println(EXP(j));
+		
+		}
 		
 		// if scientific operator = a
 		
 		else if (operator.equals("a")) {
 		    
 		    System.out.print("Enter the initial velocity (in m): ");
-		    double initialVelocity = s1.nextInt();
+		    double initialVelocity = s1.nextDouble();
 		    
 		    System.out.print("Enter the final velocity (in m): ");
-		    double finalVelocity = s1.nextInt();
+		    double finalVelocity = s1.nextDouble();
 		    
 		    System.out.print("Enter the time (in sec): ");
-		    double time = s1.nextInt();
+		    double time = s1.nextDouble();
 		    
 		  
 		   System.out.println("Acceleration:" + "\t" +  acceleration(initialVelocity, finalVelocity, time) +"\t" + "m/s^2");
@@ -230,10 +306,10 @@ public class Main
 	 else if (operator.equals("Speed")) {
 		    
 		    System.out.print("Enter the distance (in m): ");
-		    double distance = s1.nextInt();
+		    double distance = s1.nextDouble();
 		    
 		    System.out.print("Enter the time (in sec): ");
-		    double time = s1.nextInt();
+		    double time = s1.nextDouble();
 		    
 		   System.out.println("Speed of the object:" + "\t" + speed(distance, time));
 		 
@@ -245,10 +321,10 @@ public class Main
 	else if (operator.equals("Power")) {
 		    
 		    System.out.print("Enter the work (symbol - W): ");
-		    double work = s1.nextInt();
+		    double work = s1.nextDouble();
 		
 		    System.out.print("Enter the time: ");
-		    double time = s1.nextInt();
+		    double time = s1.nextDouble();
 		
 		   System.out.println("Power excited by the object:" + "\t" + power(work, time));
 		
@@ -256,7 +332,7 @@ public class Main
 		
 		// if user doesn't enter a correct operator
 		 
-		else if(!operator.equals("!") && !operator.equals("squareRoot") && !operator.equals("Square") && !operator.equals("tan") && !operator.equals("cos") && !operator.equals("sin") && !operator.equals("a") && !operator.equals("Speed") && !operator.equals("Power") && !operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("%")) {
+		else if(!operator.equals("!") && !operator.equals("squareRoot") && !operator.equals("Square") && !operator.equals("tan") && !operator.equals("cos") && !operator.equals("sin") && !operator.equals("a") && !operator.equals("Speed") && !operator.equals("Power") && !operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("%") && !operator.equals("PI") && !operator.equals("log") && !operator.equals("e") && !operator.equals("EXP")) {
 		    
 		    System.out.println("Please enter a correct operator.");
 		}
@@ -265,10 +341,10 @@ public class Main
 		else {
 	    
 		System.out.print("Enter num1: ");
-		int num1 = s1.nextInt();
+		double num1 = s1.nextDouble();
 		
 		System.out.print("Enter num2: ");
-		int num2 = s1.nextInt();
+		double num2 = s1.nextDouble();
 	
 		// if operator = +
 		
