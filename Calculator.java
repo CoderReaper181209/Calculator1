@@ -165,7 +165,7 @@ public class Main
 	    
 	    String operator = "";
 	    
-	    while (!operator.equals("!") && !operator.equals("squareRoot") && !operator.equals("Square") && !operator.equals("tan") && !operator.equals("cos") && !operator.equals("sin") && !operator.equals("a") && !operator.equals("Speed") && !operator.equals("Power") && !operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("%") && !operator.equals("PI") && !operator.equals("log") && !operator.equals("e") && !operator.equals("EXP")) {
+	    while (true) {
 		 
 		System.out.print("Enter a operator: ");
 		 operator = s1.nextLine();
